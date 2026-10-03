@@ -18,10 +18,10 @@
 
     const onScroll = () => {
         const y = window.scrollY;
-        navbar.classList.toggle("scrolled", y > 20);
+        if (navbar) navbar.classList.toggle("scrolled", y > 20);
 
         const max = document.documentElement.scrollHeight - window.innerHeight;
-        progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
+        if (progress) progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
 
         let current = null;
         sections.forEach(sec => { if (sec.getBoundingClientRect().top < window.innerHeight * 0.4) current = sec.id; });
@@ -32,13 +32,13 @@
 
     /* ---------- Mobile menu ---------- */
     const toggle = $(".nav-toggle");
-    toggle.addEventListener("click", () => {
+    if (toggle) toggle.addEventListener("click", () => {
         const open = document.body.classList.toggle("nav-open");
         toggle.setAttribute("aria-expanded", String(open));
     });
     links.forEach(a => a.addEventListener("click", () => {
         document.body.classList.remove("nav-open");
-        toggle.setAttribute("aria-expanded", "false");
+        if (toggle) toggle.setAttribute("aria-expanded", "false");
     }));
 
     /* ---------- Count-up ---------- */
@@ -87,21 +87,33 @@
     };
 
     /* ---------- Reveal on scroll ---------- */
-    if ("IntersectionObserver" in window && !reduceMotion) {
-        const io = new IntersectionObserver(entries => {
-            entries.forEach(e => {
-                if (!e.isIntersecting) return;
-                e.target.classList.add("in");
-                $$("[data-count]", e.target).forEach(countUp);
-                if (e.target.contains(varChart)) drawBars();
-                io.unobserve(e.target);
-            });
-        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
-        $$(".reveal").forEach(el => io.observe(el));
-    } else {
-        $$(".reveal").forEach(el => el.classList.add("in"));
-        $$("[data-count]").forEach(countUp);
-        if (varChart) drawBars();
+    try {
+        const revealEls = $$(".reveal");
+        const showAll = () => {
+            revealEls.forEach(el => el.classList.add("in"));
+            $$("[data-count]").forEach(el => { if (!el.dataset.done) { el.dataset.done = "1"; countUp(el); } });
+            if (varChart && !varChart.classList.contains("in")) drawBars();
+        };
+        if ("IntersectionObserver" in window && !reduceMotion) {
+            document.documentElement.classList.add("reveal-ready");
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(e => {
+                    if (!e.isIntersecting) return;
+                    e.target.classList.add("in");
+                    $$("[data-count]", e.target).forEach(el => { if (!el.dataset.done) { el.dataset.done = "1"; countUp(el); } });
+                    if (varChart && e.target.contains(varChart)) drawBars();
+                    io.unobserve(e.target);
+                });
+            }, { threshold: 0, rootMargin: "0px 0px -8% 0px" });
+            revealEls.forEach(el => io.observe(el));
+            // Safety net: never leave content hidden
+            setTimeout(() => { revealEls.forEach(el => { if (el.getBoundingClientRect().top < window.innerHeight) el.classList.add("in"); }); }, 1500);
+        } else {
+            showAll();
+        }
+    } catch (err) {
+        document.documentElement.classList.remove("reveal-ready");
+        console.error(err);
     }
     window.addEventListener("resize", () => { if (varChart && varChart.classList.contains("in")) drawBars(); });
 
