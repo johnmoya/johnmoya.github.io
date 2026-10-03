@@ -4,588 +4,581 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Juan Moya | Data Scientist</title>
+    <title>Juan Pablo Moya | Data Scientist · ML & Quant Risk</title>
 
     <meta name="description"
-          content="Juan Moya — Data Scientist specializing in Machine Learning, Generative AI, Google Cloud and quantitative analytics.">
+          content="Juan Pablo Moya — Data Scientist & Analytics Engineer in Santiago, Chile. Machine Learning, Google Cloud, Generative AI and quantitative risk.">
+    <meta name="author" content="Juan Pablo Maximiliano Moya Hermosilla">
+    <meta name="theme-color" content="#07090f">
+
+    <!-- Open Graph (LinkedIn / Slack previews) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Juan Pablo Moya | Data Scientist · ML & Quant Risk">
+    <meta property="og:description" content="Machine learning on Google Cloud, GenAI agents and quantitative risk engines — built with production discipline.">
+    <meta property="og:url" content="https://johnmoya.github.io/">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%2307090f'/><text x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='700' font-size='28' fill='%237cf5c8'>JM</text></svg>">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<div class="scroll-progress" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
+
 <header class="navbar">
     <div class="container nav-container">
-        <a href="#" class="logo">JM</a>
+        <a href="#top" class="logo" aria-label="Home">
+            <span class="logo-mark">JM</span>
+            <span class="logo-text">juan.moya<span class="blink">_</span></span>
+        </a>
 
-        <nav>
+        <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span>
+        </button>
+
+        <nav class="nav-links">
             <a href="#about">About</a>
             <a href="#projects">Projects</a>
             <a href="#experience">Experience</a>
             <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
+            <a href="#education">Education</a>
+            <a href="#contact" class="nav-cta">Contact</a>
         </nav>
     </div>
 </header>
 
 
-<main>
+<main id="top">
 
     <!-- HERO -->
-
     <section class="hero">
+        <canvas id="mc-canvas" aria-hidden="true"></canvas>
+        <div class="hero-glow" aria-hidden="true"></div>
+
         <div class="container hero-content">
 
-            <p class="eyebrow">
-                DATA SCIENTIST · MACHINE LEARNING · GENAI
+            <p class="status">
+                <span class="pulse"></span>
+                Santiago, Chile · Open to Data Science, ML &amp; Quant Risk roles
             </p>
 
             <h1>
                 Turning data into
-                <span>intelligent solutions.</span>
+                <span class="gradient-text">decisions you can trust.</span>
             </h1>
 
             <p class="hero-description">
-                Data Scientist focused on machine learning, predictive analytics,
-                Google Cloud and generative AI. I build data-driven systems that
-                connect statistical modeling, engineering and real-world business problems.
+                I'm <strong>Juan Pablo Moya</strong>, a Data Scientist &amp; Analytics Engineer.
+                I build machine learning on Google Cloud, GenAI agents and quantitative
+                risk engines — with an auditor's rigor and an engineer's discipline.
             </p>
 
             <div class="hero-buttons">
-
                 <a href="#projects" class="button primary">
                     View my work
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                 </a>
-
-                <a href="https://github.com/YOUR_USERNAME"
-                   target="_blank"
-                   class="button secondary">
+                <a href="https://github.com/johnmoya" target="_blank" rel="noopener" class="button secondary">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 10.9.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 23.5 12C23.5 5.7 18.3.5 12 .5Z"/></svg>
                     GitHub
                 </a>
-
+                <a href="https://www.linkedin.com/in/jmoyahr/" target="_blank" rel="noopener" class="button ghost">
+                    LinkedIn
+                </a>
             </div>
 
+            <div class="terminal" aria-label="Profile summary">
+                <div class="terminal-bar">
+                    <span></span><span></span><span></span>
+                    <p>~/juan-moya — python</p>
+                </div>
+<pre><code><span class="c-k">from</span> juan_moya <span class="c-k">import</span> profile
+
+profile.role      <span class="c-o">=</span> <span class="c-s">"Data Scientist &amp; Analytics Engineer"</span>
+profile.stack     <span class="c-o">=</span> [<span class="c-s">"Python"</span>, <span class="c-s">"SQL"</span>, <span class="c-s">"BigQuery"</span>, <span class="c-s">"Vertex AI"</span>]
+profile.focus     <span class="c-o">=</span> {<span class="c-s">"ML"</span>, <span class="c-s">"GenAI agents"</span>, <span class="c-s">"Market &amp; credit risk"</span>}
+profile.principle <span class="c-o">=</span> <span class="c-s">"LLMs explain. Engines compute."</span><span class="cursor"></span></code></pre>
+            </div>
+        </div>
+
+        <a href="#about" class="scroll-hint" aria-label="Scroll to About">
+            <span>scroll</span>
+            <i></i>
+        </a>
+    </section>
+
+
+    <!-- METRICS STRIP -->
+    <section class="metrics" aria-label="Highlights">
+        <div class="container metrics-grid">
+            <div class="metric reveal">
+                <p class="metric-value"><span data-count="1.25" data-decimals="2">0</span>M+</p>
+                <p class="metric-label">customers modeled in a channel cannibalization pipeline</p>
+            </div>
+            <div class="metric reveal">
+                <p class="metric-value">v<span data-count="1.1" data-decimals="1">0</span></p>
+                <p class="metric-label">Local Quant Risk AI — multi-asset VaR/ES release</p>
+            </div>
+            <div class="metric reveal">
+                <p class="metric-value"><span data-count="2">0</span></p>
+                <p class="metric-label">degrees: Accounting &amp; Audit + Industrial Engineering</p>
+            </div>
+            <div class="metric reveal">
+                <p class="metric-value">GCP</p>
+                <p class="metric-label">end-to-end ML: BigQuery → Vertex AI Pipelines</p>
+            </div>
         </div>
     </section>
 
 
     <!-- ABOUT -->
-
     <section id="about" class="section">
-
         <div class="container">
 
-            <p class="section-label">01 — ABOUT</p>
+            <p class="section-label reveal"><span>01</span> About</p>
 
-            <h2>
-                Data Science with an engineering mindset.
+            <h2 class="reveal">
+                From auditing numbers<br>
+                to <span class="gradient-text">engineering models.</span>
             </h2>
 
             <div class="about-grid">
-
-                <div>
-                    <p>
-                        I am a Data Scientist currently working in the logistics
-                        industry, where I develop predictive models, analytical
-                        solutions and AI-powered applications for operational and
-                        strategic decision-making.
+                <div class="about-text reveal">
+                    <p class="lead">
+                        I started as a <strong>Contador Auditor</strong> — trained to question every number,
+                        trace every source and document every assumption. That mindset now powers how I build
+                        machine learning.
                     </p>
-
                     <p>
-                        My experience covers the complete data science lifecycle:
-                        from data extraction and feature engineering to model
-                        development, evaluation, deployment and integration into
-                        business processes.
+                        Today I work on the Advanced Analytics team at <strong>Starken</strong>, one of Chile's
+                        largest logistics companies, where I lead analytics for the international /
+                        cross-border operation: forecasting models, shipment risk scoring, ML pipelines on
+                        Google Cloud, executive dashboards and GenAI agents.
                     </p>
-                </div>
-
-                <div>
                     <p>
-                        I work primarily with Python, SQL and Google Cloud,
-                        combining statistical methods with modern machine learning
-                        and generative AI techniques.
-                    </p>
-
-                    <p>
-                        I am particularly interested in problems at the intersection
-                        of machine learning, statistics, engineering, finance and
-                        decision science.
+                        Outside work, I build research-grade open-source projects in
+                        <strong>quantitative risk</strong> — because I care about problems where the model
+                        has to be right, explainable and auditable.
                     </p>
                 </div>
 
+                <div class="principles reveal">
+                    <div class="principle">
+                        <span class="principle-icon">◆</span>
+                        <div>
+                            <h3>Deterministic core, explainable surface</h3>
+                            <p>Numbers come from tested code. LLMs explain validated results — they never invent them.</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <span class="principle-icon">◆</span>
+                        <div>
+                            <h3>Production over notebooks</h3>
+                            <p>Packages, validation schemas, tests, CI and pipelines — not one-off scripts.</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <span class="principle-icon">◆</span>
+                        <div>
+                            <h3>Business first</h3>
+                            <p>Models only matter when they change an operational or strategic decision.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-
         </div>
-
     </section>
 
 
     <!-- PROJECTS -->
-
     <section id="projects" class="section projects-section">
-
         <div class="container">
 
-            <p class="section-label">02 — FEATURED PROJECTS</p>
+            <p class="section-label reveal"><span>02</span> Featured projects</p>
 
-            <h2>
-                Selected work.
-            </h2>
+            <h2 class="reveal">Selected work.</h2>
+
+            <!-- FLAGSHIP -->
+            <article class="flagship reveal">
+                <div class="flagship-body">
+                    <div class="card-top">
+                        <span class="badge badge-live">Open source · v1.1.0</span>
+                        <span class="project-number">01</span>
+                    </div>
+
+                    <h3>Local Quant Risk AI</h3>
+                    <p class="project-type">Market Risk · Backtesting · Local LLMs</p>
+
+                    <p>
+                        A local market-risk engine implementing <strong>Historical, Parametric and Monte Carlo
+                        VaR</strong>, <strong>Expected Shortfall</strong> and <strong>Kupiec / Christoffersen
+                        backtesting</strong> with Basel traffic-light analysis — now extended to multi-asset
+                        portfolios.
+                    </p>
+                    <p>
+                        The architecture strictly separates computation from narration: a deterministic
+                        <code>risk_engine</code> produces results, and a local LLM (Qwen3 8B via Ollama) explains
+                        them from a structured fact sheet, guarded by numeric checks so it can never
+                        hallucinate a figure.
+                    </p>
+
+                    <ul class="feature-list">
+                        <li>FastAPI service with single-asset and <code>/portfolio/*</code> endpoints</li>
+                        <li>Real-data validation on SPY 2015–2025 — documented where Gaussian VaR under-predicts tail risk</li>
+                        <li>CI on GitHub Actions (Python 3.11 &amp; 3.12), semantic versioned releases</li>
+                    </ul>
+
+                    <div class="tags">
+                        <span>Python</span><span>NumPy</span><span>SciPy</span><span>FastAPI</span>
+                        <span>Ollama</span><span>Qwen3</span><span>Docker</span><span>pytest</span>
+                    </div>
+
+                    <a href="https://github.com/johnmoya/local-quant-risk-ai" target="_blank" rel="noopener" class="project-link">
+                        View repository <span>→</span>
+                    </a>
+                </div>
+
+                <div class="flagship-visual" aria-hidden="true">
+                    <div class="var-chart">
+                        <p class="chart-title">Daily P&amp;L distribution</p>
+                        <div class="bars" id="var-bars"></div>
+                        <div class="var-line"><span>VaR 99%</span></div>
+                        <div class="chart-legend">
+                            <span><i class="lg-tail"></i>Tail loss (ES)</span>
+                            <span><i class="lg-body"></i>Returns</span>
+                        </div>
+                    </div>
+                    <div class="flow">
+                        <div class="flow-node">market data</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-node accent">risk_engine <small>deterministic</small></div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-node">fact sheet + numeric guard</div>
+                        <div class="flow-arrow">↓</div>
+                        <div class="flow-node violet">LLM explanation <small>local</small></div>
+                    </div>
+                </div>
+            </article>
 
             <div class="projects-grid">
 
-
-                <!-- PROJECT 1 -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        01
+                <article class="project-card reveal">
+                    <div class="card-top">
+                        <span class="badge">Starken · Production</span>
+                        <span class="project-number">02</span>
                     </div>
-
-                    <h3>
-                        Local Quant Risk AI
-                    </h3>
-
-                    <p class="project-type">
-                        Quantitative Risk · Machine Learning · LLMs
-                    </p>
-
+                    <h3>Reception Forecasting on Vertex AI</h3>
+                    <p class="project-type">Forecasting · MLOps · Google Cloud</p>
                     <p>
-                        A local quantitative risk engine for portfolio risk
-                        analysis, implementing VaR, Expected Shortfall,
-                        backtesting and Basel traffic-light analysis.
+                        Forecasting models that support operational planning at national scale, combining
+                        XGBoost, LightGBM, Holt-Winters and SARIMAX.
                     </p>
-
                     <p>
-                        The architecture separates financial calculations from
-                        AI explanations: the LLM explains validated results but
-                        never performs the underlying risk calculations.
+                        Currently refactoring standalone notebooks (Optuna tuning, multi-granularity
+                        predictions) into an end-to-end <strong>Vertex AI Pipelines</strong> flow with
+                        Artifact Registry.
                     </p>
-
                     <div class="tags">
-                        <span>Python</span>
-                        <span>FastAPI</span>
-                        <span>Docker</span>
-                        <span>Qwen</span>
-                        <span>Ollama</span>
+                        <span>BigQuery</span><span>Vertex AI</span><span>XGBoost</span>
+                        <span>LightGBM</span><span>Optuna</span>
                     </div>
-
-                    <a href="https://github.com/YOUR_USERNAME/local-quant-risk-ai"
-                       target="_blank"
-                       class="project-link">
-                        View project →
-                    </a>
-
                 </article>
 
-
-                <!-- PROJECT 2 -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        02
+                <article class="project-card reveal">
+                    <div class="card-top">
+                        <span class="badge">Starken · Production</span>
+                        <span class="project-number">03</span>
                     </div>
-
-                    <h3>
-                        Predictive Analytics for Logistics
-                    </h3>
-
-                    <p class="project-type">
-                        Forecasting · Machine Learning · Google Cloud
-                    </p>
-
+                    <h3>Cross-Border Delivery Risk Scoring</h3>
+                    <p class="project-type">Classification · Risk Modeling · Python Package</p>
                     <p>
-                        Predictive models developed to support operational
-                        planning in a large-scale logistics environment.
+                        Shipment-level risk scores estimating which cross-border shipments will miss
+                        operational commitments, integrating operational and customs data for earlier
+                        intervention.
                     </p>
-
                     <p>
-                        The work combines time-series forecasting and machine
-                        learning approaches, including XGBoost, LightGBM,
-                        Holt-Winters and SARIMAX.
+                        Shipped as a production Python package with YAML config, <strong>pandera</strong>
+                        data validation, pytest and CI.
                     </p>
-
                     <div class="tags">
-                        <span>Python</span>
-                        <span>BigQuery</span>
-                        <span>Vertex AI</span>
-                        <span>XGBoost</span>
-                        <span>Optuna</span>
+                        <span>BigQuery</span><span>XGBoost</span><span>Logistic Regression</span>
+                        <span>pandera</span><span>pytest</span>
                     </div>
-
                 </article>
 
-
-                <!-- PROJECT 3 -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        03
+                <article class="project-card reveal">
+                    <div class="card-top">
+                        <span class="badge">Presented at Google Day</span>
+                        <span class="project-number">04</span>
                     </div>
-
-                    <h3>
-                        Cross-Border Risk Prediction
-                    </h3>
-
-                    <p class="project-type">
-                        Classification · Risk Modeling · Vertex AI
-                    </p>
-
+                    <h3>NL2SQL Agent &amp; GenAI Workflows</h3>
+                    <p class="project-type">Generative AI · Agents · LLM Engineering</p>
                     <p>
-                        A machine learning solution designed to estimate the
-                        risk of cross-border shipments failing to meet
-                        operational commitments.
+                        A natural-language-to-SQL agent built with <strong>Google ADK</strong> and Gemini over
+                        BigQuery, letting business users query operational data in plain language.
                     </p>
-
                     <p>
-                        The pipeline integrates operational and customs data
-                        to generate shipment-level risk scores and support
-                        earlier intervention.
+                        Plus agent-based workflows with LangChain and LangGraph that automate repetitive
+                        analytical and operational tasks.
                     </p>
-
                     <div class="tags">
-                        <span>BigQuery</span>
-                        <span>XGBoost</span>
-                        <span>Logistic Regression</span>
-                        <span>Vertex AI</span>
+                        <span>Google ADK</span><span>Gemini</span><span>BigQuery</span>
+                        <span>LangGraph</span><span>Tool Calling</span>
                     </div>
-
                 </article>
 
-
-                <!-- PROJECT 4 -->
-
-                <article class="project-card">
-
-                    <div class="project-number">
-                        04
+                <article class="project-card reveal">
+                    <div class="card-top">
+                        <span class="badge">Risk · Model Governance</span>
+                        <span class="project-number">05</span>
                     </div>
-
-                    <h3>
-                        GenAI & AI Agents
-                    </h3>
-
-                    <p class="project-type">
-                        Generative AI · Agents · LLM Engineering
-                    </p>
-
+                    <h3>Credit Risk Drift Monitoring</h3>
+                    <p class="project-type">Credit Risk · Model Validation · Monitoring</p>
                     <p>
-                        AI-powered applications designed to automate repetitive
-                        analytical and operational tasks using structured business
-                        data and language models.
+                        A monitoring framework for PD models that detects population and score drift with
+                        PSI and Kolmogorov–Smirnov tests.
                     </p>
-
                     <p>
-                        Developed agent-based workflows using Google ADK and
-                        LLM architectures using LangChain and LangGraph,
-                        including Qwen integration.
+                        Designed around model-risk management principles (SR 11-7, OSFI E-23): thresholds,
+                        traceability and reporting a validator can audit.
                     </p>
-
                     <div class="tags">
-                        <span>Google ADK</span>
-                        <span>LangChain</span>
-                        <span>LangGraph</span>
-                        <span>Qwen</span>
-                        <span>Docker</span>
+                        <span>Python</span><span>PSI</span><span>KS Test</span>
+                        <span>SR 11-7</span><span>OSFI E-23</span>
                     </div>
-
                 </article>
 
             </div>
 
-        </div>
+            <!-- RESEARCH LAB -->
+            <div class="lab reveal">
+                <div class="lab-header">
+                    <h3>Research lab <span>· in progress</span></h3>
+                    <p>Smaller studies where I sharpen methods before they reach production.</p>
+                </div>
 
+                <div class="lab-grid">
+                    <div class="lab-item">
+                        <span class="lab-status">building</span>
+                        <h4>Chilean Inflation Compensation Backtest</h4>
+                        <p>How informative is the BCP–BCU 2Y breakeven about realized CPI inflation? Error metrics over Banco Central de Chile series.</p>
+                    </div>
+                    <div class="lab-item">
+                        <span class="lab-status">building</span>
+                        <h4>Predictive Maintenance · NASA C-MAPSS</h4>
+                        <p>Remaining-useful-life modeling: XGBoost + SHAP baseline, LSTM/GRU, Optuna and drift monitoring.</p>
+                    </div>
+                    <div class="lab-item">
+                        <span class="lab-status next">next</span>
+                        <h4>EWMA &amp; Filtered Historical Simulation</h4>
+                        <p>Volatility-adaptive VaR for Local Quant Risk AI, benchmarked against the SPY baseline.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
 
     <!-- EXPERIENCE -->
-
     <section id="experience" class="section">
-
         <div class="container">
 
-            <p class="section-label">03 — EXPERIENCE</p>
+            <p class="section-label reveal"><span>03</span> Experience</p>
 
-            <h2>
-                Professional experience.
-            </h2>
-
+            <h2 class="reveal">Professional experience.</h2>
 
             <div class="timeline">
 
-                <div class="timeline-item">
-
-                    <div class="timeline-date">
-                        2025 — Present
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Data Scientist
-                        </h3>
-
-                        <p class="company">
-                            Starken
-                        </p>
-
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">2025 — Present</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-body">
+                        <h3>Data Scientist &amp; Analytics Engineer</h3>
+                        <p class="company">Starken · Advanced Analytics</p>
                         <p>
-                            Developing machine learning, forecasting and AI
-                            solutions for logistics and cross-border operations.
+                            Lead analytics for the international / cross-border operation, building ML,
+                            forecasting, BI and GenAI solutions used from operations up to the board.
                         </p>
-
                         <ul>
-                            <li>Predictive modeling and time-series forecasting</li>
-                            <li>Risk prediction for cross-border operations</li>
-                            <li>Machine learning pipelines on Google Cloud</li>
-                            <li>BigQuery and Vertex AI solutions</li>
-                            <li>Generative AI and agent-based applications</li>
+                            <li>Forecasting models and ML pipelines on BigQuery &amp; Vertex AI</li>
+                            <li>Shipment-level delivery risk scoring for cross-border operations</li>
+                            <li>Executive analytics portal in Power BI (Oracle + BigQuery) and a board-level operational health dashboard</li>
+                            <li>Customer analytics: channel cannibalization (1.25M+ customers) and RFM segmentation</li>
+                            <li>NL2SQL agent with Google ADK + Gemini, presented at Google Day</li>
+                            <li>Oracle / PostgreSQL extraction and reconciliation pipelines, query optimization</li>
                         </ul>
-
                     </div>
-
                 </div>
 
-
-                <div class="timeline-item">
-
-                    <div class="timeline-date">
-                        Previous
-                    </div>
-
-                    <div>
-
-                        <h3>
-                            Demand Planner Analyst
-                        </h3>
-
-                        <p class="company">
-                            Electrolux
-                        </p>
-
+                <div class="timeline-item reveal">
+                    <div class="timeline-date">Previous</div>
+                    <div class="timeline-dot" aria-hidden="true"></div>
+                    <div class="timeline-body">
+                        <h3>Demand Planner Analyst</h3>
+                        <p class="company">Electrolux</p>
                         <p>
-                            Developed analytical and forecasting solutions to
-                            support demand planning and commercial decision-making.
+                            Built analytical and forecasting solutions to support demand planning and
+                            commercial decision-making.
                         </p>
-
                         <ul>
-                            <li>Sell-Out analytics</li>
-                            <li>Power BI dashboards</li>
+                            <li>Sell-out analytics and Power BI dashboards</li>
                             <li>SQL-based analysis</li>
-                            <li>Python forecasting models</li>
-                            <li>Forecast optimization</li>
+                            <li>Python forecasting models and forecast optimization</li>
                         </ul>
-
                     </div>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
 
     <!-- SKILLS -->
-
     <section id="skills" class="section skills-section">
-
         <div class="container">
 
-            <p class="section-label">04 — TECHNICAL SKILLS</p>
+            <p class="section-label reveal"><span>04</span> Technical skills</p>
 
-            <h2>
-                Tools I work with.
-            </h2>
+            <h2 class="reveal">Tools I work with.</h2>
 
             <div class="skills-grid">
-
-                <div class="skill-category">
-                    <h3>Programming & Data</h3>
-                    <p>
-                        Python · SQL · Pandas · NumPy · SciPy · PySpark
-                    </p>
+                <div class="skill-category reveal">
+                    <div class="skill-icon">{ }</div>
+                    <h3>Programming &amp; Data</h3>
+                    <div class="chips">
+                        <span>Python</span><span>SQL</span><span>Pandas</span><span>NumPy</span>
+                        <span>SciPy</span><span>PySpark</span><span>Oracle SQL</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon">ƒ(x)</div>
                     <h3>Machine Learning</h3>
-                    <p>
-                        Scikit-learn · XGBoost · LightGBM · Time Series ·
-                        Classification · Feature Engineering · Optuna
-                    </p>
+                    <div class="chips">
+                        <span>Scikit-learn</span><span>XGBoost</span><span>LightGBM</span><span>Time Series</span>
+                        <span>Classification</span><span>Feature Engineering</span><span>Optuna</span><span>SHAP</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Cloud & MLOps</h3>
-                    <p>
-                        Google Cloud · BigQuery · Vertex AI · Dataflow ·
-                        Cloud Run · Artifact Registry · Docker · GitHub Actions
-                    </p>
+                <div class="skill-category reveal">
+                    <div class="skill-icon">☁</div>
+                    <h3>Cloud &amp; MLOps</h3>
+                    <div class="chips">
+                        <span>BigQuery</span><span>Vertex AI</span><span>Dataform</span><span>Cloud Composer</span>
+                        <span>Dataproc</span><span>Cloud Run</span><span>Artifact Registry</span>
+                        <span>Terraform</span><span>Docker</span><span>GitHub Actions</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
+                <div class="skill-category reveal">
+                    <div class="skill-icon">✦</div>
                     <h3>Generative AI</h3>
-                    <p>
-                        LLMs · Google ADK · LangChain · LangGraph ·
-                        Qwen · AI Agents · RAG · Tool Calling
-                    </p>
+                    <div class="chips">
+                        <span>Google ADK</span><span>Gemini</span><span>LangChain</span><span>LangGraph</span>
+                        <span>Ollama</span><span>Qwen</span><span>RAG</span><span>Tool Calling</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Analytics & Data Engineering</h3>
-                    <p>
-                        Power BI · Dataform · ETL/ELT · Oracle · PostgreSQL
-                    </p>
+                <div class="skill-category reveal">
+                    <div class="skill-icon">▦</div>
+                    <h3>Analytics &amp; BI</h3>
+                    <div class="chips">
+                        <span>Power BI</span><span>DAX</span><span>ETL / ELT</span>
+                        <span>PostgreSQL</span><span>Oracle</span><span>HTML dashboards</span>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h3>Quantitative Finance</h3>
-                    <p>
-                        VaR · Expected Shortfall · Backtesting ·
-                        Portfolio Risk · Econometrics · Time-Series Analysis
-                    </p>
+                <div class="skill-category reveal">
+                    <div class="skill-icon">σ</div>
+                    <h3>Quantitative Risk</h3>
+                    <div class="chips">
+                        <span>VaR</span><span>Expected Shortfall</span><span>Kupiec / Christoffersen</span>
+                        <span>PSI / KS drift</span><span>Model Validation</span><span>Econometrics</span>
+                    </div>
                 </div>
-
             </div>
-
         </div>
-
     </section>
 
 
     <!-- EDUCATION -->
-
-    <section class="section">
-
+    <section id="education" class="section">
         <div class="container">
 
-            <p class="section-label">05 — EDUCATION</p>
+            <p class="section-label reveal"><span>05</span> Education</p>
 
-            <h2>
-                Education.
-            </h2>
+            <h2 class="reveal">Education &amp; certifications.</h2>
 
-            <div class="education-item">
-
-                <div>
-                    <h3>
-                        Ingeniería Civil Industrial
-                    </h3>
-
-                    <p>
-                        Currently pursuing · Expected 2027
-                    </p>
+            <div class="education-grid">
+                <div class="education-item reveal">
+                    <p class="edu-meta">Universidad San Sebastián · Expected 2027</p>
+                    <h3>Ingeniería Civil Industrial</h3>
+                    <p>Statistics, optimization, economics, operations research and quantitative decision-making.</p>
                 </div>
 
-                <p>
-                    Studies include statistics, optimization, economics,
-                    operations research and quantitative decision-making.
-                </p>
-
-            </div>
-
-
-            <div class="education-item">
-
-                <div>
-                    <h3>
-                        Contador Auditor
-                    </h3>
-
-                    <p>
-                        Accounting & Business
-                    </p>
+                <div class="education-item reveal">
+                    <p class="edu-meta">Professional degree</p>
+                    <h3>Contador Auditor</h3>
+                    <p>Accounting, auditing, finance and business analysis — the foundation of my rigor with data.</p>
                 </div>
 
-                <p>
-                    Background in accounting, finance and business analysis.
-                </p>
-
-            </div>
-
-
-            <div class="education-item">
-
-                <div>
-                    <h3>
-                        Statistical Learning with Python
-                    </h3>
-
-                    <p>
-                        Stanford University
-                    </p>
+                <div class="education-item reveal">
+                    <p class="edu-meta">Stanford University</p>
+                    <h3>Statistical Learning with Python</h3>
+                    <p>Regression, classification, resampling, regularization and modern machine learning.</p>
                 </div>
 
-                <p>
-                    Statistical learning, regression, classification,
-                    regularization and machine learning.
-                </p>
-
+                <div class="education-item reveal">
+                    <p class="edu-meta">Google Cloud · In preparation</p>
+                    <h3>Professional Machine Learning Engineer</h3>
+                    <p>Designing, building and operationalizing ML systems on Google Cloud.</p>
+                </div>
             </div>
-
         </div>
-
     </section>
 
 
     <!-- CONTACT -->
-
     <section id="contact" class="section contact-section">
-
         <div class="container">
+            <div class="contact-card reveal">
+                <p class="section-label"><span>06</span> Contact</p>
 
-            <p class="section-label">06 — CONTACT</p>
+                <h2>Let's build something <span class="gradient-text">rigorous.</span></h2>
 
-            <h2>
-                Let's connect.
-            </h2>
+                <p class="contact-description">
+                    Interested in roles in Data Science, Machine Learning, Applied AI, MLOps and
+                    quantitative / model risk — in consulting, finance, mining or tech.
+                </p>
 
-            <p class="contact-description">
-                I am interested in opportunities involving Data Science,
-                Machine Learning, Applied AI, GenAI, MLOps and quantitative analytics.
-            </p>
+                <div class="contact-links">
+                    <a href="mailto:j.pablomoyahr@gmail.com" class="button primary">
+                        j.pablomoyahr@gmail.com
+                    </a>
+                    <a href="https://www.linkedin.com/in/jmoyahr/" target="_blank" rel="noopener" class="button secondary">LinkedIn</a>
+                    <a href="https://github.com/johnmoya" target="_blank" rel="noopener" class="button secondary">GitHub</a>
+                </div>
 
-            <div class="contact-links">
-
-                <a href="https://github.com/YOUR_USERNAME"
-                   target="_blank">
-                    GitHub
-                </a>
-
-                <a href="https://www.linkedin.com/in/YOUR_LINKEDIN/"
-                   target="_blank">
-                    LinkedIn
-                </a>
-
-                <a href="mailto:YOUR_EMAIL">
-                    Email
-                </a>
-
+                <p class="langs">Spanish (native) · English (professional)</p>
             </div>
-
         </div>
-
     </section>
 
 </main>
 
 
 <footer>
-
-    <div class="container">
-
-        <p>
-            © 2026 Juan Moya. Built with HTML & CSS.
-        </p>
-
+    <div class="container footer-inner">
+        <p>© <span id="year">2026</span> Juan Pablo Moya Hermosilla</p>
+        <p class="mono">Built from scratch with HTML, CSS &amp; vanilla JS · Santiago, Chile</p>
     </div>
-
 </footer>
 
-
+<script src="script.js" defer></script>
 </body>
 </html>
