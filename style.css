@@ -477,6 +477,8 @@ main, footer, .navbar { position: relative; z-index: 2; }
     font-weight: 600;
     color: var(--mint);
 }
+.card-links { display: flex; flex-wrap: wrap; column-gap: 24px; }
+.card-links .project-link { margin-top: 20px; }
 .project-link span { transition: transform 0.2s; }
 .project-link:hover span { transform: translateX(5px); }
 
